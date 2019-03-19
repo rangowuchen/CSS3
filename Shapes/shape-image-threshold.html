@@ -1,0 +1,157 @@
+<!--
+ * @Author: wuchen
+ * @Date: 2019-02-01 10:32:56
+ * @LastEditors: wuchen
+ * @LastEditTime: 2019-02-01 16:59:28
+ * @Description:shape-image-threshold 
+ * @Email: rangowu@163.com
+ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            font-size: 12px;
+            box-sizing: border-box;
+        }
+
+        .wraper {
+            display: flex;
+            margin: 20px;
+            flex-wrap: wrap;
+        }
+
+        .wraper h3 {
+            margin-bottom: 32px;
+        }
+
+        .wraper>div {
+            margin-bottom: 16px;
+            flex-basis: 400px;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        .shape {
+            float: left;
+            width: 100px;
+            height: 100px;
+            padding: 20px;
+            margin: 20px;
+            border-radius: 50%;
+            border: 20px solid #2d8cf0;
+        }
+
+        .shape2 {
+            shape-outside: margin-box;
+        }
+
+        .shape3 {
+            shape-outside: border-box;
+        }
+
+        .shape4 {
+            shape-outside: padding-box;
+        }
+
+        .shape5 {
+            shape-outside: content-box;
+        }
+
+        .shape6 {
+            width: 100px;
+            height: 100px;
+            float: left;
+            shape-image-threshold: 0.5;
+            background: linear-gradient(220deg, rgba(255, 255, 255, 0), #2d8cf0);
+            shape-outside: linear-gradient(220deg, rgba(255, 255, 255, 0), #2d8cf0);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wraper">
+        <div>
+            <h3>默认</h3>
+            <div>
+                <div class="shape shape1"></div>
+                <p>今夕何夕兮，搴舟中流。</p>
+                <p>今日何日兮，得与王子同舟。</p>
+                <p>蒙羞被好兮，不訾诟耻。</p>
+                <p>心几烦而不绝兮，得知王子。</p>
+                <p>山有木兮木有枝，心悦君兮君不知。</p>
+            </div>
+        </div>
+
+        <div>
+            <h3>盒模型形状-margin-box</h3>
+            <div>
+                <div class="shape shape2"></div>
+                <p>今夕何夕兮，搴舟中流。</p>
+                <p>今日何日兮，得与王子同舟。</p>
+                <p>蒙羞被好兮，不訾诟耻。</p>
+                <p>心几烦而不绝兮，得知王子。</p>
+                <p>山有木兮木有枝，心悦君兮君不知。</p>
+            </div>
+        </div>
+
+        <div>
+            <h3>盒模型形状-border-box</h3>
+            <div>
+                <div class="shape shape3"></div>
+                <p>今夕何夕兮，搴舟中流。</p>
+                <p>今日何日兮，得与王子同舟。</p>
+                <p>蒙羞被好兮，不訾诟耻。</p>
+                <p>心几烦而不绝兮，得知王子。</p>
+                <p>山有木兮木有枝，心悦君兮君不知。</p>
+            </div>
+        </div>
+
+        <div>
+            <h3>盒模型形状-padding-box</h3>
+            <div>
+                <div class="shape shape4"></div>
+                <p>今夕何夕兮，搴舟中流。</p>
+                <p>今日何日兮，得与王子同舟。</p>
+                <p>蒙羞被好兮，不訾诟耻。</p>
+                <p>心几烦而不绝兮，得知王子。</p>
+                <p>山有木兮木有枝，心悦君兮君不知。</p>
+            </div>
+        </div>
+
+        <div>
+            <h3>盒模型形状-content-box</h3>
+            <div>
+                <div class="shape shape5"></div>
+                <p>今夕何夕兮，搴舟中流。</p>
+                <p>今日何日兮，得与王子同舟。</p>
+                <p>蒙羞被好兮，不訾诟耻。</p>
+                <p>心几烦而不绝兮，得知王子。</p>
+                <p>山有木兮木有枝，心悦君兮君不知。</p>
+            </div>
+        </div>
+
+        <div>
+            <h3>渐变</h3>
+            <div>
+                <div class="shape6"></div>
+                <p>今夕何夕兮，搴舟中流。</p>
+                <p>今日何日兮，得与王子同舟。</p>
+                <p>蒙羞被好兮，不訾诟耻。</p>
+                <p>心几烦而不绝兮，得知王子。</p>
+                <p>山有木兮木有枝，心悦君兮君不知。</p>
+            </div>
+        </div>
+    </div>
+</body>
+<!-- 
+		参考链接
+		http://www.daqianduan.com/6724.html
+	 -->
+
+</html>

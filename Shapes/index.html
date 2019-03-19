@@ -1,0 +1,140 @@
+<!--
+ * @Author: wuchen
+ * @Date: 2019-02-01 10:14:58
+ * @LastEditors: wuchen
+ * @LastEditTime: 2019-02-01 10:23:06
+ * @Description: shape-outside
+ * @Email: rangowu@163.com
+ -->
+
+<!DOCTYPE html>
+<html>
+    <!-- 
+        shape-outside:该属性使用形状值来定义浮动区域的浮动，这将使得内联内容环绕着形状，
+        而不是产生浮动的边框。可以通过图形函数来定义基本形状。
+        shape-outside: circle(arg)  //创建圆
+        shape-outside: polygon(arg); //创建多边形
+        shape-outside: ellipse(arg);  //创建椭圆
+        shape-outside: inset(arg);  //创建矩形
+     -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>shape-outside</title>
+    <style>
+        p {
+            margin: 0;
+        }
+
+        .wraper {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .wraper .item {
+            flex-basis: 500px;
+        }
+
+        .shapes {
+            float: left;
+            width: 200px;
+            height: 200px;
+        }
+
+        .shapes1 {
+            shape-outside: circle(50%);
+        }
+
+        .shapes2 {
+            shape-outside: polygon(0 0, 100% 100%, 0 100%);
+        }
+
+        .shapes3 {
+            shape-outside: ellipse(72px 88px);
+        }
+
+        .shapes4 {
+            shape-outside: inset(72px 88px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wraper">
+
+        <div class="item">
+            <h4>创建圆:shape-outside: circle(50%);</h4>
+            <div>
+                <img src="http://www.daqianduan.com/wp-content/uploads/2018/11/shapes.jpg" class="shapes shapes1">
+                <p>关关雎鸠，在河之洲</p>
+                <p>窈窕淑女，君子好逑</p>
+                <p>参差荇菜，左右流之</p>
+                <p>窈窕淑女，寤寐求之</p>
+                <p>求之不得，寤寐思服</p>
+                <p>悠哉悠哉，辗转反侧</p>
+                <p>参差荇菜，左右采之</p>
+                <p>窈窕淑女，琴瑟友之</p>
+                <p>参差荇菜，左右芼之</p>
+                <p>窈窕淑女，钟鼓乐之</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <h4>创建多边形:shape-outside: polygon(100% 0, 100% 100%, 0 100%);</h4>
+            <div>
+                <div class="shapes shapes2"></div>
+                <p>关关雎鸠，在河之洲</p>
+                <p>窈窕淑女，君子好逑</p>
+                <p>参差荇菜，左右流之</p>
+                <p>窈窕淑女，寤寐求之</p>
+                <p>求之不得，寤寐思服</p>
+                <p>悠哉悠哉，辗转反侧</p>
+                <p>参差荇菜，左右采之</p>
+                <p>窈窕淑女，琴瑟友之</p>
+                <p>参差荇菜，左右芼之</p>
+                <p>窈窕淑女，钟鼓乐之</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <h4>创建椭圆:shape-outside: ellipse(72px 88px);</h4>
+            <div>
+                <div class="shapes shapes3"></div>
+                <p>关关雎鸠，在河之洲</p>
+                <p>窈窕淑女，君子好逑</p>
+                <p>参差荇菜，左右流之</p>
+                <p>窈窕淑女，寤寐求之</p>
+                <p>求之不得，寤寐思服</p>
+                <p>悠哉悠哉，辗转反侧</p>
+                <p>参差荇菜，左右采之</p>
+                <p>窈窕淑女，琴瑟友之</p>
+                <p>参差荇菜，左右芼之</p>
+                <p>窈窕淑女，钟鼓乐之</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <h4>创建矩形: shape-outside: inset(72px 88px);</h4>
+            <div>
+                <div class="shapes shapes4"></div>
+                <p>关关雎鸠，在河之洲</p>
+                <p>窈窕淑女，君子好逑</p>
+                <p>参差荇菜，左右流之</p>
+                <p>窈窕淑女，寤寐求之</p>
+                <p>求之不得，寤寐思服</p>
+                <p>悠哉悠哉，辗转反侧</p>
+                <p>参差荇菜，左右采之</p>
+                <p>窈窕淑女，琴瑟友之</p>
+                <p>参差荇菜，左右芼之</p>
+                <p>窈窕淑女，钟鼓乐之</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+    <!-- 
+		参考链接
+		http://www.daqianduan.com/6704.html
+	 -->
+
+</html>
