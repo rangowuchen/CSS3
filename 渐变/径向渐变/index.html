@@ -1,0 +1,115 @@
+<!--
+ * @Author: wuchen
+ * @Date: 2019-08-11 17:31:05
+ * @LastEditors: wuchen
+ * @LastEditTime: 2019-08-11 18:03:50
+ * @Description: 径向渐变实现渐变效果
+ * @Email: rangowu@163.com
+ -->
+<!DOCTYPE html>
+<div lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>径向渐变</title>
+        <style>
+            div {
+                width: 100%;
+                height: 60px;
+                margin: 10px 0;
+            }
+
+            .div1 {
+                background: -webkit-radial-gradient(red, pink, #BEB9F9);
+                /* Safari 5.1 - 6.0 */
+                background: -o-radial-gradient(red, pink, #BEB9F9);
+                /* Opera 11.6 - 12.0 */
+                background: -moz-radial-gradient(red, pink, #BEB9F9);
+                /* Firefox 3.6 - 15 */
+                background: radial-gradient(red, pink, #BEB9F9);
+                /* 标准的语法 */
+            }
+
+            /* 不均匀分布 */
+            .div2 {
+                background: -webkit-radial-gradient(red 5%, pink 15%, #BEB9F9 60%);
+                /* Safari 5.1 - 6.0 */
+                background: -o-radial-gradient(red 5%, pink 15%, #BEB9F9 60%);
+                /* Opera 11.6 - 12.0 */
+                background: -moz-radial-gradient(red 5%, pink 15%, #BEB9F9 60%);
+                /* Firefox 3.6 - 15 */
+                background: radial-gradient(red 5%, pink 15%, #BEB9F9 60%);
+                /* 标准的语法 */
+            }
+
+            /* 设置形状 */
+            .div3 {
+                background: -webkit-radial-gradient(circle, red, yellow, pink);
+                /* Safari 5.1 - 6.0 */
+                background: -o-radial-gradient(circle, red, yellow, pink);
+                /* Opera 11.6 - 12.0 */
+                background: -moz-radial-gradient(circle, red, yellow, pink);
+                /* Firefox 3.6 - 15 */
+                background: radial-gradient(circle, red, yellow, pink);
+                /* 标准的语法 */
+            }
+
+            /* 
+            不同尺寸大小关键字的使用
+            closest-side
+            farthest-side
+            closest-corner
+            farthest-corner
+             */
+            .div4 {
+                /* Safari 5.1 - 6.0 */
+                background: -webkit-radial-gradient(60% 55%, closest-side, #BEB9F9, pink, yellow, black);
+                /* Opera 11.6 - 12.0 */
+                background: -o-radial-gradient(60% 55%, closest-side, #BEB9F9, pink, yellow, black);
+                /* Firefox 3.6 - 15 */
+                background: -moz-radial-gradient(60% 55%, closest-side, #BEB9F9, pink, yellow, black);
+                /* 标准的语法 */
+                background: radial-gradient(60% 55%, closest-side, #BEB9F9, pink, yellow, black);
+            }
+
+            .div5 {
+                /* Safari 5.1 - 6.0 */
+                background: -webkit-radial-gradient(60% 55%, farthest-side, #BEB9F9, pink, yellow, black);
+                /* Opera 11.6 - 12.0 */
+                background: -o-radial-gradient(60% 55%, farthest-side, #BEB9F9, pink, yellow, black);
+                /* Firefox 3.6 - 15 */
+                background: -moz-radial-gradient(60% 55%, farthest-side, #BEB9F9, pink, yellow, black);
+                /* 标准的语法 */
+                background: radial-gradient(60% 55%, farthest-side, #BEB9F9, pink, yellow, black);
+            }
+
+            /* 重复性 */
+            .div6 {
+                /* Safari 5.1 - 6.0 */
+                background: -webkit-repeating-radial-gradient(red, yellow 10%, pink 15%);
+                /* Opera 11.6 - 12.0 */
+                background: -o-repeating-radial-gradient(red, yellow 10%, pink 15%);
+                /* Firefox 3.6 - 15 */
+                background: -moz-repeating-radial-gradient(red, yellow 10%, pink 15%);
+                /* 标准的语法 */
+                background: repeating-radial-gradient(red, yellow 10%, pink 15%);
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- 
+        background: radial-gradient(center, shape size, start-color, ..., last-color);
+       径向渐变 - 颜色结点均匀分布（默认情况下）
+     -->
+        <div class="div1"></div>
+        <div class="div2"></div>
+        <div class="div3"></div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+        <div class="div6"></div>
+    </body>
+
+</div>
